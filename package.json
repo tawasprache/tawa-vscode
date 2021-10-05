@@ -1,0 +1,26 @@
+{
+    "name": "tawa-vscode",
+    "displayName": "tawa-vscode",
+    "description": "Tawa support for VSCode",
+    "version": "0.0.1",
+    "publisher": "tawasprache",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tawa",
+            "aliases": ["Tawa", "tawa"],
+            "extensions": [".tawa"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tawa",
+            "scopeName": "source.tawa",
+            "path": "./syntaxes/tawa.tmLanguage.json"
+        }]
+    }
+}

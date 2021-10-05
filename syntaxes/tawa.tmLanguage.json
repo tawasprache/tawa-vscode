@@ -1,0 +1,230 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tawa",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#brackets"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"comment": "package declaration",
+			"begin": "\\b(paket)\\s+",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.paket.tawa"
+				}
+			},
+			"end": "(?!\\G)",
+			"patterns": [
+				{
+					"match": "\\w+",
+					"name": "entity.name.paket.tawa"
+				}
+			]
+		},
+		{
+			"comment": "keywords",
+			"patterns": [
+				{
+					"match": "paket",
+					"name": "keyword.paket.tawa"
+				},
+				{
+					"match": "zeigt",
+					"name": "keyword.zeigt.tawa"
+				},
+				{
+					"match": "zeigende",
+					"name": "keyword.zeigende.tawa"
+				},
+				{
+					"match": "import",
+					"name": "keyword.import.tawa"
+				}
+			]
+		},
+		{
+			"comment": "function declarations",
+			"match": "(\\bfunk\\b)\\s+(\\b\\w+\\b)",
+			"captures": {
+				"1": {
+					"name": "keyword.function.tawa"
+				},
+				"2": {
+					"name": "entity.name.function.tawa"
+				}
+			}
+		},
+		{
+			"comment": "numeric literals",
+			"match": "([0-9]+)",
+			"captures": {
+				"1": {
+					"name": "constant.numeric.integer.tawa"
+				}
+			}
+		},
+		{
+			"comment": "type declarations",
+			"begin": "(\\btyp\\b)\\s+(\\b\\w+\\b)\\s+(\\bist\\b)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.type.tawa"
+				},
+				"2": {
+					"name": "entity.name.type.tawa"
+				},
+				"3": {
+					"name": "keyword.ist.tawa"
+				}
+			},
+			"end": "(\\bbeende\\b)",
+			"endCaptures": {
+				"1": {
+					"name": "keyword.beende.tawa"
+				}
+			}
+		}
+	],
+	"repository": {
+		"brackets": {
+			"patterns": [
+				{
+					"begin": "{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.begin.bracket.curly.tawa"
+						}
+					},
+					"end": "}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.curly.tawa"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.begin.bracket.round.tawa"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.round.tawa"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"match": "\\[|\\]",
+					"name": "punctuation.definition.bracket.square.tawa"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tawa",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.tawa",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tawa",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.tawa",
+					"begin": "(\\/\\*)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.tawa"
+						}
+					},
+					"end": "(\\*\\/)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.tawa"
+						}
+					}
+				},
+				{
+					"name": "comment.line.double-slash.go",
+					"begin": "(\\/\\/)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.tawa"
+						}
+					},
+					"end": "(?:\\n|$)"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"match": "(\\|)",
+					"name": "keyword.pipe.tawa"
+				},
+				{
+					"match": "(\\,)",
+					"name": "keyword.comma.tawa"
+				},
+				{
+					"match": "(\\:)",
+					"name": "keyword.colon.tawa"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"match": "((§\\w+)|(\\w+:?)+)(\\[.*?\\])?",
+					"captures": {
+						"1": {
+							"name": "support.type.tawa"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "$self"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.tawa"
+}

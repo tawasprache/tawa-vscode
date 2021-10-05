@@ -1,0 +1,20 @@
+paket Haupt zeigt nichts
+
+import Tawa:DOM zeigende alles
+
+typ Struktur ist
+    a: Ganz
+    b: Ganz
+beende
+
+funk NeuStruktur(): Struktur
+    #Struktur { a = 5, b = 50 }
+
+funk NeuerStruktur(): Struktur
+    { NeuStruktur() | a = 5, b = 3 }
+
+funk WasIst(a: Struktur): Ganz
+    a.a
+
+funk Haupt()
+    DocumentWrite("Hallo welt!")
