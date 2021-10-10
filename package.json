@@ -2,7 +2,7 @@
     "name": "tawa-vscode",
     "displayName": "tawa-vscode",
     "description": "Tawa support for VSCode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "tawasprache",
     "engines": {
         "vscode": "^1.50.0"
@@ -20,7 +20,13 @@
         "grammars": [{
             "language": "tawa",
             "scopeName": "source.tawa",
-            "path": "./syntaxes/tawa.tmLanguage.json"
+            "path": "./syntaxes/tawa.json"
         }]
+    },
+    "scripts": {
+		"compile-syntax": "reon-convert to-json syntaxes/tawa.reon"
+	},
+    "devDependencies": {
+        "reon-convert": "^0.1.16"
     }
 }
