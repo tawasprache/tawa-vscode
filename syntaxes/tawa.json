@@ -56,7 +56,7 @@
 					"include": "#empty"
 				},
 				{
-					"begin": "\\b[a-zA-Z_]\\w*\\b",
+					"begin": "\\b[[:alpha:]]\\w*\\b",
 					"beginCaptures": [
 						{
 							"name": "entity.name.type.tawa"
@@ -87,7 +87,7 @@
 											"include": "#empty"
 										},
 										{
-											"match": "\\b[a-zA-Z_]\\w*\\b",
+											"match": "\\b[[:alpha:]]\\w*\\b",
 											"name": "entity.name.type.tawa"
 										},
 										{
@@ -209,12 +209,12 @@
 					"include": "#empty"
 				},
 				{
-					"begin": "\\b[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b",
+					"begin": "\\b[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b",
 					"beginCaptures": [
 						{
 							"patterns": [
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -224,7 +224,7 @@
 											"name": "keyword.operator.tawa"
 										}
 									],
-									"end": "\\b[a-zA-Z_]\\w*\\b",
+									"end": "\\b[[:alpha:]]\\w*\\b",
 									"endCaptures": [
 										{
 											"name": "entity.name.type.tawa"
@@ -253,12 +253,12 @@
 											"name": "keyword.tawa"
 										}
 									],
-									"end": "\\b[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b",
+									"end": "\\b[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b",
 									"endCaptures": [
 										{
 											"patterns": [
 												{
-													"match": "\\b[a-zA-Z_]\\w*\\b",
+													"match": "\\b[[:alpha:]]\\w*\\b",
 													"name": "entity.name.type.tawa"
 												},
 												{
@@ -268,7 +268,7 @@
 															"name": "keyword.operator.tawa"
 														}
 													],
-													"end": "\\b[a-zA-Z_]\\w*\\b",
+													"end": "\\b[[:alpha:]]\\w*\\b",
 													"endCaptures": [
 														{
 															"name": "entity.name.type.tawa"
@@ -299,7 +299,7 @@
 													"include": "#empty"
 												},
 												{
-													"match": "\\b[a-zA-Z_]\\w*\\b",
+													"match": "\\b[[:alpha:]]\\w*\\b",
 													"name": "entity.name.type.tawa"
 												}
 											]
@@ -344,7 +344,7 @@
 					"include": "#empty"
 				},
 				{
-					"begin": "\\b[a-zA-Z_]\\w*\\b",
+					"begin": "\\b[[:alpha:]]\\w*\\b",
 					"beginCaptures": [
 						{
 							"name": "entity.name.type.tawa"
@@ -363,7 +363,7 @@
 									"include": "#empty"
 								},
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -384,7 +384,7 @@
 									"include": "#empty"
 								},
 								{
-									"begin": "\\b[a-zA-Z_]\\w*\\b",
+									"begin": "\\b[[:alpha:]]\\w*\\b",
 									"beginCaptures": [
 										{
 											"name": "variable.tawa"
@@ -424,7 +424,7 @@
 									"end": "$|(?=\\bbeende\\b)",
 									"patterns": [
 										{
-											"begin": "\\b[a-zA-Z_]\\w*\\b",
+											"begin": "\\b[[:alpha:]]\\w*\\b",
 											"beginCaptures": [
 												{
 													"name": "entity.name.type.tawa"
@@ -440,7 +440,7 @@
 													"end": "$|(?=\\bbeende\\b)",
 													"patterns": [
 														{
-															"begin": "\\b[a-zA-Z_]\\w*\\b",
+															"begin": "\\b[[:alpha:]]\\w*\\b",
 															"beginCaptures": [
 																{
 																	"name": "variable.parameter.tawa"
@@ -507,7 +507,7 @@
 					"include": "#empty"
 				},
 				{
-					"begin": "\\b[a-zA-Z_]\\w*\\b",
+					"begin": "\\b[[:alpha:]]\\w*\\b",
 					"beginCaptures": [
 						{
 							"name": "entity.name.function.tawa"
@@ -526,7 +526,7 @@
 									"include": "#empty"
 								},
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -539,7 +539,7 @@
 							"end": "(?=\\b(?:funk|typ)\\b)",
 							"patterns": [
 								{
-									"begin": "\\b[a-zA-Z_]\\w*\\b",
+									"begin": "\\b[[:alpha:]]\\w*\\b",
 									"beginCaptures": [
 										{
 											"name": "variable.parameter.tawa"
@@ -624,16 +624,16 @@
 		"type": {
 			"patterns": [
 				{
-					"match": "§[a-zA-Z_]\\w*\\b",
+					"match": "§[[:alpha:]]\\w*\\b",
 					"name": "entity.name.type.tawa"
 				},
 				{
-					"begin": "(\\b[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b)\\[",
+					"begin": "(\\b[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b)\\[",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -643,7 +643,7 @@
 											"name": "keyword.operator.tawa"
 										}
 									],
-									"end": "\\b[a-zA-Z_]\\w*\\b",
+									"end": "\\b[[:alpha:]]\\w*\\b",
 									"endCaptures": [
 										{
 											"name": "entity.name.type.tawa"
@@ -667,12 +667,12 @@
 					]
 				},
 				{
-					"match": "\\b[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b",
+					"match": "\\b[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b",
 					"captures": [
 						{
 							"patterns": [
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -682,7 +682,7 @@
 											"name": "keyword.operator.tawa"
 										}
 									],
-									"end": "\\b[a-zA-Z_]\\w*\\b",
+									"end": "\\b[[:alpha:]]\\w*\\b",
 									"endCaptures": [
 										{
 											"name": "entity.name.type.tawa"
@@ -858,12 +858,12 @@
 									"include": "#empty"
 								},
 								{
-									"begin": "#[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b",
+									"begin": "#[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b",
 									"beginCaptures": [
 										{
 											"patterns": [
 												{
-													"match": "#|\\b[a-zA-Z_]\\w*\\b",
+													"match": "#|\\b[[:alpha:]]\\w*\\b",
 													"name": "entity.name.type.tawa"
 												},
 												{
@@ -873,7 +873,7 @@
 															"name": "keyword.operator.tawa"
 														}
 													],
-													"end": "\\b[a-zA-Z_]\\w*\\b",
+													"end": "\\b[[:alpha:]]\\w*\\b",
 													"endCaptures": [
 														{
 															"name": "entity.name.type.tawa"
@@ -883,7 +883,7 @@
 											]
 										}
 									],
-									"end": "(?=#[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b(?:\\s*\\(.*?\\))?\\s*=>|\\bbeende\\b)",
+									"end": "(?=#[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b(?:\\s*\\(.*?\\))?\\s*=>|\\bbeende\\b)",
 									"patterns": [
 										{
 											"include": "#empty"
@@ -896,7 +896,7 @@
 													"include": "#empty"
 												},
 												{
-													"match": "\\b[a-zA-Z_]\\w*\\b",
+													"match": "\\b[[:alpha:]]\\w*\\b",
 													"name": "variable.tawa"
 												},
 												{
@@ -911,7 +911,7 @@
 													"name": "keyword.operator.tawa"
 												}
 											],
-											"end": "(?=#[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b(?:\\s*\\(.*?\\))?\\s*=>|\\bbeende\\b)",
+											"end": "(?=#[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b(?:\\s*\\(.*?\\))?\\s*=>|\\bbeende\\b)",
 											"patterns": [
 												{
 													"include": "#empty"
@@ -931,7 +931,7 @@
 					]
 				},
 				"~field": {
-					"match": "(\\.)([a-zA-Z_]\\w*\\b)",
+					"match": "(\\.)([[:alpha:]]\\w*\\b)",
 					"captures": {
 						"1": {
 							"name": "keyword.operator.tawa"
@@ -942,12 +942,12 @@
 					}
 				},
 				"~call": {
-					"begin": "\\b((?:[a-zA-Z_]\\w*:)*)([a-zA-Z_]\\w*)\\s*\\(",
+					"begin": "\\b((?:[[:alpha:]]\\w*:)*)([[:alpha:]]\\w*)\\s*\\(",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
 								{
-									"match": "\\b[a-zA-Z_]\\w*\\b",
+									"match": "\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -974,7 +974,7 @@
 					]
 				},
 				"~fields": {
-					"begin": "\\b[a-zA-Z_]\\w*\\b",
+					"begin": "\\b[[:alpha:]]\\w*\\b",
 					"beginCaptures": [
 						{
 							"name": "variable.tawa"
@@ -1017,12 +1017,12 @@
 					]
 				},
 				"~ctor": {
-					"begin": "#[a-zA-Z_]\\w*(?::[a-zA-Z_]\\w*)*\\b",
+					"begin": "#[[:alpha:]]\\w*(?::[[:alpha:]]\\w*)*\\b",
 					"beginCaptures": [
 						{
 							"patterns": [
 								{
-									"match": "#|\\b[a-zA-Z_]\\w*\\b",
+									"match": "#|\\b[[:alpha:]]\\w*\\b",
 									"name": "entity.name.type.tawa"
 								},
 								{
@@ -1032,7 +1032,7 @@
 											"name": "keyword.operator.tawa"
 										}
 									],
-									"end": "\\b[a-zA-Z_]\\w*\\b",
+									"end": "\\b[[:alpha:]]\\w*\\b",
 									"endCaptures": [
 										{
 											"name": "entity.name.type.tawa"
@@ -1146,7 +1146,7 @@
 					]
 				},
 				"~ident": {
-					"match": "\\b[a-zA-Z_]\\w*\\b"
+					"match": "\\b[[:alpha:]]\\w*\\b"
 				}
 			}
 		}

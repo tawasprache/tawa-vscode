@@ -9,8 +9,8 @@ pick.deep: macro [values indexes res:][
 ]
 
 
-ident: "\b[a-zA-Z_]\w*\b"
-ident-path: "\b[a-zA-Z_]\w*(?::[a-zA-Z_]\w*)*\b"
+ident: "\b[[:alpha:]]\w*\b"
+ident-path: "\b[[:alpha:]]\w*(?::[[:alpha:]]\w*)*\b"
 
 variant-path: rejoin ["#" skip ident-path 2]
 
@@ -501,7 +501,7 @@ end-pattern-branch: rejoin [
 		type #(
 			patterns [
 				#(
-					match "§[a-zA-Z_]\w*\b"
+					match "§[[:alpha:]]\w*\b"
 					name "entity.name.type.tawa"
 				)
 				#(
@@ -701,7 +701,7 @@ end-pattern-branch: rejoin [
 				)
 
 				~call #(
-					begin "\b((?:[a-zA-Z_]\w*:)*)([a-zA-Z_]\w*)\s*\("
+					begin "\b((?:[[:alpha:]]\w*:)*)([[:alpha:]]\w*)\s*\("
 					beginCaptures #(
 						1 #(patterns [
 							#(
