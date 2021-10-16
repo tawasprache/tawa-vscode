@@ -731,6 +731,9 @@
 					"include": "#~native"
 				},
 				{
+					"include": "#~sei"
+				},
+				{
 					"include": "#~ident"
 				}
 			],
@@ -827,6 +830,10 @@
 							"name": "keyword.operator.comparison.tawa"
 						}
 					]
+				},
+				"~sei": {
+					"match": "\\bsei\\b|\\bin\\b",
+					"name": "keyword.tawa"
 				},
 				"~match": {
 					"begin": "\\bpasst\\b",

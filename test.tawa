@@ -18,3 +18,10 @@ funk WasIst(a: Struktur): Ganz
 
 funk Haupt()
     DocumentWrite("Hallo welt!")
+
+funk Maths()
+    (1 + 2)
+
+funk Sei(): Ganz
+    sei x = 1 in
+    x + 1

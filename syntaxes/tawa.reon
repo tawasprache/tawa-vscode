@@ -541,6 +541,7 @@ end-pattern-branch: rejoin [
 				#(include #~ctor)
 				#(include #~update)
 				#(include #~native)
+				#(include #~sei)
 				#(include #~ident)
 			]
 
@@ -634,6 +635,11 @@ end-pattern-branch: rejoin [
 							name "keyword.operator.comparison.tawa"
 						)
 					]
+				)
+
+				~sei #(
+					match "\bsei\b|\bin\b"
+					name "keyword.tawa"
 				)
 
 				~match #(
