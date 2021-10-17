@@ -30,3 +30,8 @@ funk Haupt()
     Debuggen:druck(
         Leiste:map([1, 2, 3], \(x: Ganz): Ganz => x + 1)
     )
+
+funk Haupt()
+    Debuggen:druck(
+        Leiste:map([1, 2, 3], \(x: Ganz): Ganz => x + 1)
+    )

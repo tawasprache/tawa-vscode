@@ -859,7 +859,7 @@
 									"name": "variable.parameter.tawa"
 								}
 							],
-							"end": "(?=[,)])",
+							"end": "(?=([,)]|=>|->))",
 							"endCaptures": [
 								{
 									"name": "keyword.operator.tawa"
@@ -900,7 +900,7 @@
 									"name": "keyword.operator.tawa"
 								}
 							],
-							"end": "(=>|->)",
+							"end": "(?=(=>|->))",
 							"endCaptures": [
 								{
 									"name": "keyword.operator.tawa"
@@ -917,7 +917,7 @@
 											"name": "keyword.operator.tawa"
 										}
 									],
-									"end": "(=>|->)",
+									"end": "(?=(=>|->))",
 									"endCaptures": [
 										{
 											"name": "keyword.operator.tawa"

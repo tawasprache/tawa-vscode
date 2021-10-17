@@ -655,9 +655,9 @@ end-pattern-branch: rejoin [
 							begin (ident)
 							beginCaptures [#(name "variable.parameter.tawa")]
 							
-							end "(?=[,)])"
+							end "(?=([,)]|=>|->))"
 							endCaptures [#(name "keyword.operator.tawa")]
-							
+
 							patterns [
 								#(include #empty)
 								#(
@@ -678,7 +678,7 @@ end-pattern-branch: rejoin [
 							begin "\)"
 							beginCaptures [#(name "keyword.operator.tawa")]
 
-							end "(=>|->)"
+							end "(?=(=>|->))"
 							endCaptures [#(name "keyword.operator.tawa")]
 
 							patterns [
@@ -687,7 +687,7 @@ end-pattern-branch: rejoin [
 									begin ":"
 									beginCaptures [#(name "keyword.operator.tawa")]
 
-									end "(=>|->)"
+									end "(?=(=>|->))"
 									endCaptures [#(name "keyword.operator.tawa")]
 							
 									patterns [
