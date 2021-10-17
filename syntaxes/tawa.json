@@ -734,6 +734,9 @@
 					"include": "#~sei"
 				},
 				{
+					"include": "#~funktionsliteral"
+				},
+				{
 					"include": "#~ident"
 				}
 			],
@@ -834,6 +837,107 @@
 				"~sei": {
 					"match": "\\bsei\\b|\\bin\\b",
 					"name": "keyword.tawa"
+				},
+				"~funktionsliteral": {
+					"begin": "\\\\\\(",
+					"beginCaptures": [
+						{
+							"name": "keyword.operator.tawa"
+						}
+					],
+					"end": "(=>|->)",
+					"endCaptures": [
+						{
+							"name": "keyword.operator.tawa"
+						}
+					],
+					"patterns": [
+						{
+							"begin": "\\b[[:alpha:]]\\w*\\b",
+							"beginCaptures": [
+								{
+									"name": "variable.parameter.tawa"
+								}
+							],
+							"end": "(?=[,)])",
+							"endCaptures": [
+								{
+									"name": "keyword.operator.tawa"
+								}
+							],
+							"patterns": [
+								{
+									"include": "#empty"
+								},
+								{
+									"begin": ":",
+									"beginCaptures": [
+										{
+											"name": "keyword.operator.tawa"
+										}
+									],
+									"end": "(?=[,)])",
+									"endCaptures": [
+										{
+											"name": "keyword.operator.tawa"
+										}
+									],
+									"patterns": [
+										{
+											"include": "#empty"
+										},
+										{
+											"include": "#type"
+										}
+									]
+								}
+							]
+						},
+						{
+							"begin": "\\)",
+							"beginCaptures": [
+								{
+									"name": "keyword.operator.tawa"
+								}
+							],
+							"end": "(=>|->)",
+							"endCaptures": [
+								{
+									"name": "keyword.operator.tawa"
+								}
+							],
+							"patterns": [
+								{
+									"include": "#empty"
+								},
+								{
+									"begin": ":",
+									"beginCaptures": [
+										{
+											"name": "keyword.operator.tawa"
+										}
+									],
+									"end": "(=>|->)",
+									"endCaptures": [
+										{
+											"name": "keyword.operator.tawa"
+										}
+									],
+									"patterns": [
+										{
+											"include": "#empty"
+										},
+										{
+											"include": "#type"
+										}
+									]
+								}
+							]
+						},
+						{
+							"include": "#comma"
+						}
+					]
 				},
 				"~match": {
 					"begin": "\\bpasst\\b",
